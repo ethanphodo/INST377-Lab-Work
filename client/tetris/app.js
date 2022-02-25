@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
       [1, width+1, width*2+1, width*3+1],
       [width, width+1, width+2, width+3]
     ]
-   
+    
     const theTetrominoes = [lTetromino, zTetromino, tTetromino, oTetromino, iTetrimino]
    
     let currentPosition = 4
@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
      draw()
      freeze()
    }
-   
+
    //freeze function
    function freeze() {
      if(current.some(index => squares[currentPosition + index + width].classList.contains('taken'))){
@@ -100,32 +100,31 @@ document.addEventListener('DOMContentLoaded', () => {
      }
    }
    
-   //move the tetromino left, unless is at the edge or there is a blockage
-   function moveLeft(){
-     undraw()
-     const isAtLeftEdge = current.some(index => (currentPosition + index) % width === 0)
-   
-     if(!isAtLeftEdge) currentPosition -=1
-   
-     if(current.some(index => squares[currentPosition + index].classList.contains('taken'))) {
-   
-     }
-   }
-   
-   draw()
-   }
-   
-   //move the tetromino right, unless is at the edge or there is a blockage
-   function moveRight() {
-     undraw()
-
-     const isAtRightEdge = current.some(index => (currentPosition + index) % width === width -1)
-   
-     if(!isAtRightEdge) currentPosition +=1
-   
-     if(current.some(index => squares [currentPosition + index].classList.contains('taken'))) {
-       currentPosition -=1
-     }
-   
-     draw()
+ 
+  //move the tetromino left, unless is at the edge or there is a blockage
+  function moveLeft(){
+    undraw()
+    const isAtLeftEdge = current.some(index => (currentPosition + index) % width === 0)
+  
+    if(!isAtLeftEdge) currentPosition -=1
+  
+    if(current.some(index => squares[currentPosition + index].classList.contains('taken'))) {
+       
     }
+    draw()
+  }
+  
+  
+  //move the tetromino right, unless is at the edge or there is a blockage
+  function moveRight(){
+      undraw()
+      const isAtRightEdge = current.some(index => (currentPosition + index) % width === width -1)
+      
+      if(!isAtRightEdge) currentPosition +=1
+      
+      if(current.some(index => squares [currentPosition + index].classList.contains('taken'))) {
+       currentPosition -=1
+      }
+      draw()
+   }
+})
