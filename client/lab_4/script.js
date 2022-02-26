@@ -1,14 +1,14 @@
-let slidePosition = 0l
-const slides = document.getElementsByClassName('carousel_item');
+let slidePosition = 0;
+const slides = document.querySelectorAll('carousel_item');
 const totalSlides = slides.length;
 
 document.
-    getElementById('carousel_button--next')
+    querySelector('carousel_button--next')
     .addEventListener("click", function() {
         moveToNextSlide();
     });
 document.
-    getElementById('carousel_button--prev')
+    querySelector('carousel_button--prev')
     .addEventListener("click", function() {
         moveToPrevSlide();
     });
@@ -32,8 +32,6 @@ document.
     }
 
     function moveToPrevSlide() {
-       
-
         if(slidePosition === 0) {
             slidePosition = totalSlides - 1;
         } else {
