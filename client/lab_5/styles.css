@@ -100,3 +100,35 @@ body {
     padding-right: 20px;
   }
 }
+
+/* Change this rule */
+.form-row input[type='text'] {
+  background-color: #FFFFFF;
+  /* ... */
+}
+
+/* To have another selector */
+.form-row input[type='text'],
+.form-row input[type='email'] {
+  background-color: #FFFFFF;
+  /* ... */
+}
+
+@media only screen and (min-width: 700px) {
+  /* ... */
+  .form-row input[type='text'],
+  .form-row input[type='email'],    /* Add */
+  .form-row select,                 /* These */
+  .form-row textarea {              /* Selectors */
+    width: 250px;
+    height: initial;
+  }
+  /* ... */
+}
+
+.form-row input[type='text']:invalid,
+.form-row input[type='email']:invalid {
+  border: 1px solid #D55C5F;
+  color: #D55C5F;
+  box-shadow: none; /* Remove default red glow in Firefox */
+}
