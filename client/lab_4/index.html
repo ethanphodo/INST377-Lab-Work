@@ -35,31 +35,38 @@
 
     <body>
     <div class="photo-grid-container">
-        <div class="photo-grid">
-                <div class="carousel">
-                    <div class="carousel_item">
+        <div class="carousel">
+                <div class="carousel-images">
+
+                    <div class="carousel_item visible">
                         <img src="images/one.svg"/>
                     </div>
-                    <div class="carousel_item">
+    
+                    <div class="carousel_item hidden">
                         <img src="images/two.svg"/>
                     </div>
-                    <div class="carousel_item">
+
+                    <div class="carousel_item hidden">
                         <img src="images/three.svg"/>
                     </div>
-                    <div class="carousel_item">
+
+                    <div class="carousel_item hidden">
                         <img src="images/four.svg"/>
                     </div>
-                    <div class="carousel_item">
+
+                    <div class="carousel_item hidden">
                         <img src="images/five.svg"/>
                     </div>
 
-                    <div class="carousel_actions">
-                        <button id="carousel_button--prev"><strong>Prev</strong></button>
-                        <button id="carousel_button--next"><strong>Next</strong></button>
-                    </div>
+                </div>
+
+                <div class="carousel_actions">
+                    <button id="prev"><strong>Prev</strong></button>
+                    <button id="next"><strong>Next</strong></button>
                 </div>
             </div>
         </div>
+    </div>
 
         <script src="app.js"></script>
         <div class="footer">
