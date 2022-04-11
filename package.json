@@ -16,10 +16,11 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "bulma": "^0.9.3",
     "chalk": "^4.1.1",
     "connect-livereload": "^0.6.1",
     "dotenv": "^10.0.0",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "livereload": "^0.9.3",
     "mysql2": "^2.2.5",
     "node-fetch": "^3.2.0",
